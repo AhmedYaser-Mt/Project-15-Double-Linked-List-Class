@@ -16,7 +16,9 @@ int main()
     cout << "\nLinked List Content :\n";
     MyDblLinkedList.PrintList();
 
-    clsDblLinkedList<short>::Node* N1 = MyDblLinkedList.Find(2);
+    cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;
+
+    /*clsDblLinkedList<short>::Node* N1 = MyDblLinkedList.Find(2);
 
     if (N1 != NULL)
         cout << "\n\nNode with value 2 is found :-)\n";
@@ -48,7 +50,7 @@ int main()
     MyDblLinkedList.DeleteLastNode();
 
     cout << "\n\nAfter Deleting Last Node :\n";
-    MyDblLinkedList.PrintList();
+    MyDblLinkedList.PrintList();*/
 
     system("pause>0");
     return 0;
