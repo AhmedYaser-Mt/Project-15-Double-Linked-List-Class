@@ -6,9 +6,16 @@ using namespace std;
 template <class T>
 class clsDblLinkedList
 {
-	int ListSize = 0;
+protected:
+
+	int _Size = 0;
 
 public:
+
+	int Size()
+	{
+		return _Size;
+	}
 
 	class Node
 	{
@@ -20,24 +27,6 @@ public:
 	};
 
 	Node* Head = NULL;
-
-	void InsertAtBeginning(T Value)
-	{
-		Node* NewNode = new Node;
-
-		NewNode->Value = Value;
-		NewNode->Next = Head;
-		NewNode->Prev = NULL;
-
-		if (Head != NULL)
-		{
-			Head->Prev = NewNode;
-		}
-
-		Head = NewNode;
-
-		ListSize++;
-	}
 
 	void PrintList()
 	{
@@ -70,6 +59,24 @@ public:
 		return NULL;
 	}
 
+	void InsertAtBeginning(T Value)
+	{
+		Node* NewNode = new Node;
+
+		NewNode->Value = Value;
+		NewNode->Next = Head;
+		NewNode->Prev = NULL;
+
+		if (Head != NULL)
+		{
+			Head->Prev = NewNode;
+		}
+
+		Head = NewNode;
+
+		_Size++;
+	}
+
 	void InsertAfter(Node* Current, T Value)
 	{
 		if (Current == NULL)
@@ -90,7 +97,7 @@ public:
 
 		Current->Next = NewNode;
 
-		ListSize++;
+		_Size++;
 	}
 
 	void InsertAtEnd(T Value)
@@ -118,7 +125,7 @@ public:
 			LastNode->Next = NewNode;
 		}
 
-		ListSize++;
+		_Size++;
 	}
 
 	void DeleteNode(Node*& NodeToDelete)
@@ -145,7 +152,7 @@ public:
 
 		delete NodeToDelete;
 
-		ListSize--;
+		_Size--;
 	}
 
 	void DeleteFirstNode()
@@ -166,7 +173,7 @@ public:
 
 		delete Temp;
 
-		ListSize--;
+		_Size--;
 	}
 
 	void DeleteLastNode()
@@ -180,7 +187,7 @@ public:
 		{
 			delete Head;
 			Head = NULL;
-			ListSize--;
+			_Size--;
 			return;
 		}
 
@@ -196,12 +203,7 @@ public:
 		Currenct->Next = NULL;
 		delete Temp;
 
-		ListSize--;
-	}
-
-	int Size()
-	{
-		return ListSize;
+		_Size--;
 	}
 };
 
