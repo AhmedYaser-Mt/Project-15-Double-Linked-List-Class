@@ -12,6 +12,11 @@ protected:
 
 public:
 
+	bool IsEmpty()
+	{
+		return (_Size == 0);
+	}
+
 	int Size()
 	{
 		return _Size;
@@ -206,9 +211,12 @@ public:
 		_Size--;
 	}
 
-	bool IsEmpty()
+	void Clear()
 	{
-		return (_Size == 0);
+		while (!IsEmpty())
+		{
+			DeleteFirstNode();
+		}
 	}
 };
 
