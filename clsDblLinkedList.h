@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include "clsUtil.h"
 
 using namespace std;
 
@@ -238,6 +237,23 @@ public:
 		{
 			Head = Temp->Prev;
 		}
+	}
+
+	Node* GetNode(int Index)
+	{
+		if (Index > (_Size - 1) || Index < 0)
+			return NULL;
+
+		Node* Current = Head;
+		int Counter = 0;
+
+		while (Counter != Index)
+		{
+			Current = Current->Next;
+			Counter++;
+		}
+
+		return Current;
 	}
 };
 
