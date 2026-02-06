@@ -16,17 +16,22 @@ int main()
     cout << "\nLinked List Content :\n";
     MyDblLinkedList.PrintList();
 
-    cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;
+    MyDblLinkedList.Reverse();
+
+    cout << "\nLinked List Content after reverse :\n";
+    MyDblLinkedList.PrintList();
+
+    /*cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;
 
     cout << "\nExecutint .Clear()\n";
 
     MyDblLinkedList.Clear();
-    cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;
+    cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;*/
 
-    if (MyDblLinkedList.IsEmpty())
+    /*if (MyDblLinkedList.IsEmpty())
         cout << "\n\nYes List is Empty.\n";
     else
-        cout << "\n\nNo List is not Empty.\n";
+        cout << "\n\nNo List is not Empty.\n";*/
 
     /*clsDblLinkedList<short>::Node* N1 = MyDblLinkedList.Find(2);
 

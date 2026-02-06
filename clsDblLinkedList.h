@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "clsUtil.h"
 
 using namespace std;
 
@@ -216,6 +217,26 @@ public:
 		while (!IsEmpty())
 		{
 			DeleteFirstNode();
+		}
+	}
+
+	void Reverse()
+	{
+		Node* Current = Head;
+		Node* Temp = nullptr;
+
+		while (Current != nullptr)
+		{
+			Temp = Current->Prev;
+			Current->Prev = Current->Next;
+			Current->Next = Temp;
+
+			Current = Current->Prev;
+		}
+
+		if (Temp != nullptr)
+		{
+			Head = Temp->Prev;
 		}
 	}
 };
