@@ -255,5 +255,17 @@ public:
 
 		return Current;
 	}
+
+	T GetItem(int Index)
+	{	
+		/*return GetNode(Index)->Value;*/
+
+		Node* ItemNode = GetNode(Index);
+
+		if (ItemNode == NULL)
+			return NULL;
+		else
+			return ItemNode->Value;
+	}
 };
 

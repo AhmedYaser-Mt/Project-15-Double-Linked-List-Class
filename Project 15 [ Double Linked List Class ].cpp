@@ -16,11 +16,13 @@ int main()
     cout << "\nLinked List Content :\n";
     MyDblLinkedList.PrintList();
 
-    clsDblLinkedList<short>::Node* N1;
+    cout << "\nItem (2) Value is : " << MyDblLinkedList.GetItem(-3) << endl;
+
+    /*clsDblLinkedList<short>::Node* N1;
 
     N1 = MyDblLinkedList.GetNode(2);
 
-    cout << "\nNode Value is : " << N1->Value << endl;
+    cout << "\nNode Value is : " << N1->Value << endl;*/
 
     /*MyDblLinkedList.Reverse();
 
