@@ -16,7 +16,10 @@ int main()
     cout << "\nLinked List Content :\n";
     MyDblLinkedList.PrintList();
 
-    cout << "\nItem (2) Value is : " << MyDblLinkedList.GetItem(-3) << endl;
+    MyDblLinkedList.UpdateItem(2, 500);
+
+    cout << "\nAfter Updating Item (2) :\n";
+    MyDblLinkedList.PrintList();
 
     /*clsDblLinkedList<short>::Node* N1;
 

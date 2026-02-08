@@ -258,14 +258,27 @@ public:
 
 	T GetItem(int Index)
 	{	
-		/*return GetNode(Index)->Value;*/
-
 		Node* ItemNode = GetNode(Index);
 
 		if (ItemNode == NULL)
 			return NULL;
 		else
 			return ItemNode->Value;
+	}
+
+	bool UpdateItem(int Index, T NewValue)
+	{
+		Node* ItemNode = GetNode(Index);
+
+		if (ItemNode != NULL)
+		{
+			ItemNode->Value = NewValue;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 };
 
