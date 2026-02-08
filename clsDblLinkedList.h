@@ -280,5 +280,20 @@ public:
 			return false;
 		}
 	}
+
+	bool InsertAfter(int Index, T Value)
+	{
+		Node* N1 = GetNode(Index);
+
+		if (N1 != NULL)
+		{
+			InsertAfter(N1, Value);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 };
 
