@@ -1,60 +1,56 @@
-# 🔗 Project 15 — Double Linked List Class (Template)
+# 🔗 Project 15 — Doubly Linked List Class (C++ | OOP | Templates)
 
-This repository contains **Project 15: Double Linked List Class**, part of  
+This repository contains **Project 15: Doubly Linked List Class**, part of  
 **Algorithms & Problem Solving – Level 5** on **ProgrammingAdvices**,  
 under the guidance of **Dr. Mohammed Abu-Hadhoud**.
 
-This project is a practical continuation of **Data Structures – Level 1**, where a Double Linked List was first implemented using standalone functions, and is now refactored into a **clean, reusable, object-oriented template class**.
+This project represents a practical evolution of **Data Structures – Level 1**, where the Doubly Linked List was originally implemented using standalone functions.  
+Here, the same data structure is redesigned as a **clean, reusable, object-oriented template class**, suitable for real-world reuse and extension.
 
 ---
 
 ## 📌 Project Objective
 
-- Reinforce **Data Structures** concepts through real implementation  
-- Apply **Object-Oriented Programming (OOP)** correctly  
-- Convert functional DS code into a reusable **library-style class**  
-- Practice clean, readable, and maintainable code  
-- Prepare the data structure for reuse in future projects  
+- Strengthen core **Data Structures** concepts through real implementation  
+- Apply **Object-Oriented Programming (OOP)** correctly and practically  
+- Refactor functional DS code into a reusable **library-style class**  
+- Practice clean, readable, and maintainable C++ code  
+- Build a solid foundation for future advanced data structures  
 
-This project is part of the **consolidation stage** at the end of Part One of the roadmap.
+This project is part of the **consolidation phase** at the end of Part One of the roadmap.
 
 ---
 
 ## 🧠 Concepts Covered
 
-- Double Linked List fundamentals  
-- Encapsulation and class design  
+- Doubly Linked List fundamentals  
+- Encapsulation and class responsibility  
 - Template programming (`template <class T>`)  
 - Pointer-based memory management  
-- List traversal using `Head` and `Current`  
-- Clean and incremental implementation  
+- Traversal using `Head` and `Current` pointers  
+- Incremental and reusable design  
 
 ---
 
 ## 🏗️ Project Structure
 
-<pre>
-📦 Project Structure
-
-├── Data Structures
-│   └── clsDblLinkedList.h
-│
-└── Source Files
-    └── main.cpp   // Testing & usage examples
-</pre>
-
-
+📦 Project Structure  
+├── Data Structures  
+│   └── clsDblLinkedList.h  
+│  
+└── Source Files  
+    └── main.cpp   // Testing and usage examples  
 
 ---
 
 ## 🔧 Design Notes
 
 - `Node` is implemented as an **inner class** inside `clsDblLinkedList`
-- `Head` is a public pointer that always points to the first node
-- No need to pass `Head` to functions (managed internally by the class)
-- Traversal is done using a local `Current` pointer
+- `Head` is a public pointer that always references the first node
+- No need to pass `Head` to functions — list state is managed internally
+- Traversal is performed using a local `Current` pointer
 - Implemented as a **template class** to support multiple data types
-- Designed as a **library**, not a one-time solution
+- Designed as a **reusable library**, not a one-time solution
 
 ---
 
@@ -67,7 +63,9 @@ This project is part of the **consolidation stage** at the end of Part One of th
 - Delete a specific node  
 - Delete first node  
 - Delete last node  
-- Print list contents  
+- Traverse and print list contents  
+- Index-based access and update  
+- Reverse the list  
 
 ---
 
@@ -83,35 +81,35 @@ MyDblLinkedList.InsertAtEnd(10);
 MyDblLinkedList.PrintList();
 ```
 
+---
+
 ## 📚 Learning Methodology
 
-This project strictly follows the course methodology:
+This project strictly follows the ProgrammingAdvices methodology:
 
 - No rushing or guessing
 
-- No adding features from personal assumptions
+- No adding features based on assumptions
 
-- Following a step-by-step instructor-driven approach
+- Step-by-step instructor-driven implementation
 
-- Implementing first, then reviewing the official solution
+- Writing code first, then reviewing the official solution
 
 - Understanding why before extending or optimizing
 
-This approach ensures strong foundations and avoids confusion later.
+This approach ensures strong fundamentals and long-term clarity.
 
 ---
 
 ## 🚀 Future Enhancements
 
-This README is initial and will be updated as the project evolves with:
+- Additional utility methods
 
-- Additional methods and utilities
+- Extended safety and validation
 
-- Extended functionality
+- Better abstraction and encapsulation
 
-- Integration with other projects
-
-- Better abstraction and safety improvements
+- Integration with other data structures
 
 ---
 
@@ -123,13 +121,13 @@ This README is initial and will be updated as the project evolves with:
 
 - Instructor: Dr. Mohammed Abu-Hadhoud
 
-- Course: Algorithms & Problem Solving – Level 5
+- Course: 13 - Algorithms & Problem Solving – Level 5
 
 ---
 
 ## 🧠 Final Note
 
 Strong developers don’t rush to advanced topics.
-They build foundations that allow them to scale confidently.
+They build solid foundations that allow them to scale with confidence.
 
-This project represents a key step in that journey.
+This project represents an important step in that journey. 🚀
