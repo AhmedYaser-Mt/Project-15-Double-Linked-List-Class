@@ -43,7 +43,7 @@ int main()
     cout << "Is Empty : " << MyDblLinkedList.IsEmpty() << endl;
 
     MyDblLinkedList.Clear();
-    cout << "After Clear -> Is Empty : " << MyDblLinkedList.IsEmpty() << endl;
+    cout << "After Clear -> Is Empty : " << MyDblLinkedList.IsEmpty() << "\n";
 
     system("pause>0");
     return 0;
