@@ -12,16 +12,6 @@ protected:
 
 public:
 
-	bool IsEmpty()
-	{
-		return (_Size == 0);
-	}
-
-	int Size()
-	{
-		return _Size;
-	}
-
 	class Node
 	{
 	public:
@@ -211,6 +201,16 @@ public:
 		_Size--;
 	}
 
+	int Size()
+	{
+		return _Size;
+	}
+
+	bool IsEmpty()
+	{
+		return (_Size == 0);
+	}
+
 	void Clear()
 	{
 		while (!IsEmpty())
@@ -283,11 +283,11 @@ public:
 
 	bool InsertAfter(int Index, T Value)
 	{
-		Node* N1 = GetNode(Index);
+		Node* ItemNode = GetNode(Index);
 
-		if (N1 != NULL)
+		if (ItemNode != NULL)
 		{
-			InsertAfter(N1, Value);
+			InsertAfter(ItemNode, Value);
 			return true;
 		}
 		else

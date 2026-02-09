@@ -7,76 +7,43 @@ int main()
 {
     clsDblLinkedList <short> MyDblLinkedList;
 
-    MyDblLinkedList.InsertAtBeginning(5);
-    MyDblLinkedList.InsertAtBeginning(4);
-    MyDblLinkedList.InsertAtBeginning(3);
-    MyDblLinkedList.InsertAtBeginning(2);
-    MyDblLinkedList.InsertAtBeginning(1);
-
-    cout << "\nLinked List Content :\n";
+    MyDblLinkedList.InsertAtBeginning(10);
+    MyDblLinkedList.InsertAtEnd(20);
+    MyDblLinkedList.InsertAtEnd(30);
+    MyDblLinkedList.InsertAfter(1, 25);   
     MyDblLinkedList.PrintList();
 
-    MyDblLinkedList.InsertAfter(-1, 500);
+    clsDblLinkedList <short>::Node* Node = MyDblLinkedList.Find(25);
 
-    cout << "\nAfter Insert :\n";
-    MyDblLinkedList.PrintList();
-
-    /*clsDblLinkedList<short>::Node* N1;
-
-    N1 = MyDblLinkedList.GetNode(2);
-
-    cout << "\nNode Value is : " << N1->Value << endl;*/
-
-    /*MyDblLinkedList.Reverse();
-
-    cout << "\nLinked List Content after reverse :\n";
-    MyDblLinkedList.PrintList();*/
-
-    /*cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;
-
-    cout << "\nExecutint .Clear()\n";
-
-    MyDblLinkedList.Clear();
-    cout << "\nNumber of items in the Linked List = " << MyDblLinkedList.Size() << endl;*/
-
-    /*if (MyDblLinkedList.IsEmpty())
-        cout << "\n\nYes List is Empty.\n";
+    if (Node != NULL)
+        cout << "\nNode Found :-)\n\n";
     else
-        cout << "\n\nNo List is not Empty.\n";*/
+        cout << "\nNode is not Found :-(\n\n";
 
-    /*clsDblLinkedList<short>::Node* N1 = MyDblLinkedList.Find(2);
+    Node = MyDblLinkedList.GetNode(3);
 
-    if (N1 != NULL)
-        cout << "\n\nNode with value 2 is found :-)\n";
-    else
-        cout << "\n\nNode is not found :-(\n";
+    MyDblLinkedList.InsertAfter(Node, 40);
 
-    MyDblLinkedList.InsertAfter(N1, 500);
-
-    cout << "\n\nAfter Inserting 500 After 2 :\n";
     MyDblLinkedList.PrintList();
 
-    MyDblLinkedList.InsertAtEnd(700);
+    cout << "\nItem at index 2 : " << MyDblLinkedList.GetItem(2) << "\n\n";
 
-    cout << "\n\nAfter Inserting 700 at end :\n";
-    MyDblLinkedList.PrintList();
-
-    clsDblLinkedList<short>::Node* N2 = MyDblLinkedList.Find(4);
-
-    MyDblLinkedList.DeleteNode(N2);
-
-    cout << "\n\nAfter Deleting 4 :\n";
+    MyDblLinkedList.UpdateItem(2, 99);
     MyDblLinkedList.PrintList();
 
     MyDblLinkedList.DeleteFirstNode();
-
-    cout << "\n\nAfter Deleting First Node :\n";
+    MyDblLinkedList.DeleteNode(Node);
+    MyDblLinkedList.DeleteLastNode();
     MyDblLinkedList.PrintList();
 
-    MyDblLinkedList.DeleteLastNode();
+    MyDblLinkedList.Reverse();
+    MyDblLinkedList.PrintList();
 
-    cout << "\n\nAfter Deleting Last Node :\n";
-    MyDblLinkedList.PrintList();*/
+    cout << "Size : " << MyDblLinkedList.Size() << endl;
+    cout << "Is Empty : " << MyDblLinkedList.IsEmpty() << endl;
+
+    MyDblLinkedList.Clear();
+    cout << "After Clear -> Is Empty : " << MyDblLinkedList.IsEmpty() << endl;
 
     system("pause>0");
     return 0;
